@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "config": "^3.3.3",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.10.16",
     "shortid": "^2.2.16",
