@@ -2,8 +2,8 @@ const express = require("express");
 const connectDB = require("./config/db");
 const shortid = require("shortid");
 const validUrl = require("valid-url");
-const shortUrlRoute = require("./routes/shorturl")
-const getShortenUrlRoute = require("./routes/getshortenurl")
+const routes = require('./routes/router')
+
 
 const app = express();
 connectDB();
@@ -13,5 +13,4 @@ const PORT = 8000;
 app.listen(PORT, () => console.log("Server is listening on port " + PORT));
 
 
-app.use("/",getShortenUrlRoute)
-app.use("/shorten", shortUrlRoute);
+app.use(routes);
